@@ -17,6 +17,7 @@ public class ParamGenerator {
     private final int three = 3;
     private final int ten = 10;
     private final int hundred = 100;
+    private final double fhundred = 100.0;
     private final int thousand = 1000;
 
     /**
@@ -75,7 +76,7 @@ public class ParamGenerator {
         final int x = number % thousand / hundred;
         int v = (x + 1) * ten;
         int k = three * ten + x * ten;
-        double height = (hundred + x * ten) / (float) hundred;
+        double height =  (hundred + x * ten) / fhundred;
         return new Physical(v, k, height);
     }
 
