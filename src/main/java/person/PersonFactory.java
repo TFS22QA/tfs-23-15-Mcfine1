@@ -21,13 +21,14 @@ public class PersonFactory {
         }
 
         return new Person(
-                code,
-                new ParamGenerator().lngeneration(Integer.parseInt(code)),
-                new ParamGenerator().fngeneration(Integer.parseInt(code)),
-                new ParamGenerator().mngeneration(Integer.parseInt(code)),
-                new ParamGenerator().GenPh(Integer.parseInt(code)),
-                new ParamGenerator().gen_Ap(Integer.parseInt(code)),
-                phone
-        );
+                        code,
+                        new ParamGenerator().generationLastName(Integer.parseInt(code)),
+                        new ParamGenerator().generationFirstName(Integer.parseInt(code)),
+                        new ParamGenerator().generationMiddleName(Integer.parseInt(code)),
+                        new ParamGenerator().generationPhysics(Integer.parseInt(code)),
+                        new ParamGenerator().generationAppearance(Integer.parseInt(code)),
+                phone,
+                new ParamGenerator().generationPassportNumber(Integer.parseInt(code))
+                );
     }
 }
