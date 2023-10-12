@@ -4,10 +4,10 @@ import person.models.Param;
 
 public class Appearance extends Param {
 
-    private final String eyes;
+    private final Eyes eyes;
     private final Hair hair;
 
-    public Appearance(final String eyes, final Hair hair) {
+    public Appearance(final Eyes eyes, final Hair hair) {
         this.eyes = eyes;
         this.hair = hair;
     }

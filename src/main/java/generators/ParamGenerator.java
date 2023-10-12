@@ -3,6 +3,7 @@ package generators;
 import person.models.Passport;
 import person.models.Physical;
 import person.models.appearance.Appearance;
+import person.models.appearance.Eyes;
 import person.models.appearance.Hair;
 import person.models.appearance.enums.EyesColor;
 import person.models.appearance.enums.HairColor;
@@ -29,7 +30,7 @@ public class ParamGenerator {
         if (i > 0) {
             hc = HairColor.values()[i - 1].name().toLowerCase();
         }
-        return new Appearance(e, new Hair(i, hc));
+        return new Appearance(new Eyes(e), new Hair(i, hc));
     }
 
     /**
