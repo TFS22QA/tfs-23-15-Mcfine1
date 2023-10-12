@@ -1,6 +1,6 @@
 package person.models;
 
-public class Passport extends Param {
+public class Passport {
 
     private final String number;
 

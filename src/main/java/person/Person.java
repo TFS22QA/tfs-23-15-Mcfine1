@@ -4,25 +4,21 @@ import person.models.Passport;
 import person.models.Phone;
 import person.models.Physical;
 import person.models.appearance.Appearance;
+import person.models.appearance.Name;
 
 public class Person {
 
     private String id;
-    private String lastName;
-    private String firstName;
-    private String middleName;
+    private Name name;
     private Physical phys;
     private Appearance appearance;
     private Phone phone;
 
     private Passport passport;
 
-    public Person(String id, String lastName, String firstName, String middleName,
-                  Physical phys, Appearance appearance, Phone phone, Passport passport) {
+    public Person(String id, Name name, Physical phys, Appearance appearance, Phone phone, Passport passport) {
         this.id = id;
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.middleName = middleName;
+        this.name = name;
         this.phys = phys;
         this.appearance = appearance;
         this.phone = phone;
@@ -31,7 +27,6 @@ public class Person {
 
     @Override
     public final String toString() {
-        return id + "\n" + lastName + "\n" + firstName + "\n" +
-                middleName + "\n" + phys + "\n" + appearance + "\n" + phone + "\n" + passport;
+        return id + "\n" + name + "\n" + phys + "\n" + appearance + "\n" + phone + "\n" + passport;
     }
 }
